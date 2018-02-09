@@ -41,6 +41,19 @@
         white-space: pre-wrap;
         word-break: break-all;
       }
+      img {
+        max-width: 90%;
+        border: $style-border;
+      }
+      audio {
+        border: $style-border;
+      }
+      video {
+        width: 720px;
+        height: 400px;
+        background-color: black;
+        border: $style-border;
+      }
     }
     .complete, .abort, .error {
       padding: 4px 10px;

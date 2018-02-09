@@ -1,18 +1,18 @@
 import BaseReader from './BaseReader'
 import LogInfo from '../common/LogInfo'
 
-export default class ImageReader extends BaseReader {
+export default class AudioReader extends BaseReader {
   execute (file) {
     super.readAsUrl(file)
   }
 
   onLoadEnd (e) {
     super.onLoadEnd(e)
-    console.log(new ImageReadResult(this.reader.result))
+    console.log(new AudioReadResult(this.reader.result))
   }
 }
 
-class ImageReadResult extends LogInfo {
+class AudioReadResult extends LogInfo {
   constructor (url) {
     super()
     this.url = url
@@ -21,7 +21,7 @@ class ImageReadResult extends LogInfo {
   get html () {
     return `
 <article>
-  <img src="${this.url}">
+  <audio src="${this.url}" controls></audio>
 </article>
 `
   }
