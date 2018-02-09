@@ -2,6 +2,6 @@ import TextReader from './TextReader'
 import ImageReader from './ImageReader'
 
 export default [
-  TextReader,
-  ImageReader
+  {name: 'TextReader', factory: TextReader},
+  {name: 'ImageReader', factory: ImageReader}
 ]

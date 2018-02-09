@@ -56,9 +56,9 @@
         this.file = e.target.files[0]
       },
       startLoad () {
-        let Reader = readers.find(item => item.name === this.reader)
-        if (Reader) {
-          this.$emit('load', {file: this.file, Reader})
+        let reader = readers.find(item => item.name === this.reader)
+        if (reader) {
+          this.$emit('load', {file: this.file, Reader: reader.factory})
         } else {
           this.error = true
         }

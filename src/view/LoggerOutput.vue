@@ -38,6 +38,7 @@
       border: $style-border;
       background-color: $white2;
       p {
+        white-space: pre-wrap;
         word-break: break-all;
       }
     }
