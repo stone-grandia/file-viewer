@@ -26,13 +26,13 @@
 </script>
 <style scoped lang="scss">
   .output {
-    padding: 20px 50px 150px;
+    padding: 0 50px 150px;
   }
 </style>
 <style lang="scss">
   .message {
     color: $color-text;
-    margin-top: 10px;
+    margin: 30px 0;
     article {
       padding: 10px;
       border: $style-border;

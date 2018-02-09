@@ -1,7 +1,10 @@
 <template>
   <div>
     <header>
-      <div class="content"><b>File Viewer</b></div>
+      <div class="content">
+        <b>File Viewer</b>
+        <small>in chrome</small>
+      </div>
     </header>
     <nav class="input">
       <option-input class="content" @load="onRead"></option-input>
@@ -28,3 +31,8 @@
     }
   }
 </script>
+<style scoped lang="scss">
+  small {
+    font-size: x-small;
+  }
+</style>
