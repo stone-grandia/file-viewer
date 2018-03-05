@@ -3,12 +3,8 @@ import LogInfo from '../common/LogInfo'
 
 export default class ImageReader extends BaseReader {
   execute (file) {
-    super.readAsUrl(file)
-  }
-
-  onLoadEnd (e) {
-    super.onLoadEnd(e)
-    console.log(new ImageReadResult(this.reader.result))
+    let url = super.readAsUrl(file)
+    console.log(new ImageReadResult(url))
   }
 }
 
@@ -21,6 +17,7 @@ class ImageReadResult extends LogInfo {
   get html () {
     return `
 <article>
+  <p>${this.url}</p>
   <img src="${this.url}">
 </article>
 `

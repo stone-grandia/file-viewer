@@ -21,9 +21,7 @@ export default class BaseReader {
   }
 
   readAsUrl (file) {
-    this.reader.readAsDataURL(file)
-    this.progress = new ReadProgressInfo(file.name, 'url')
-    console.log(this.progress)
+    return URL.createObjectURL(file)
   }
 
   readAsBinary (file) {

@@ -3,12 +3,8 @@ import LogInfo from '../common/LogInfo'
 
 export default class VideoReader extends BaseReader {
   execute (file) {
-    super.readAsUrl(file)
-  }
-
-  onLoadEnd (e) {
-    super.onLoadEnd(e)
-    console.log(new VideoReadResult(this.reader.result))
+    let url = super.readAsUrl(file)
+    console.log(new VideoReadResult(url))
   }
 }
 
@@ -21,6 +17,7 @@ class VideoReadResult extends LogInfo {
   get html () {
     return `
 <article>
+  <p>${this.url}</p>
   <video src="${this.url}" controls></video>
 </article>
 `

@@ -3,12 +3,8 @@ import LogInfo from '../common/LogInfo'
 
 export default class AudioReader extends BaseReader {
   execute (file) {
-    super.readAsUrl(file)
-  }
-
-  onLoadEnd (e) {
-    super.onLoadEnd(e)
-    console.log(new AudioReadResult(this.reader.result))
+    let url = super.readAsUrl(file)
+    console.log(new AudioReadResult(url))
   }
 }
 
@@ -21,6 +17,7 @@ class AudioReadResult extends LogInfo {
   get html () {
     return `
 <article>
+  <p>${this.url}</p>
   <audio src="${this.url}" controls></audio>
 </article>
 `

@@ -40,6 +40,7 @@
       p {
         white-space: pre-wrap;
         word-break: break-all;
+        margin: 10px 0;
       }
       img {
         max-width: 90%;
